@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %} анкета {% endblock %}
+
+{% block content %}
+<main>
+    <br>
+    <h4>Лучше сначала подумать, а потом открывать варианты ответа</h4><br>
+	<h1>Что на мужчине?</h1>
+	<img src='https://opt-336725.ssl.1c-bitrix-cdn.ru/upload/iblock/e81/e812029dddd2193ce36e3addf738b5e1.png?1534852481977295' width="350" height="500">
+		<form class="container" action="/process">
+			<br><div>
+			    <select name="top">
+                    <option value="dunno">не знаю</option>
+					<option value="teln">тельняшка</option>
+					<option value="matr">матроска</option>
+					<option value="other">другое</option>
+				</select>
+			</div><br><br><br>
+			<h2>Дополнительные вопросы:</h2><br>
+			<div>
+				<select name="sex">
+                    <option value="q_sex">Ваш пол?</option>
+					<option value="man">моряк</option>
+					<option value="woman">морячка</option>
+					<option value="other">другое</option>
+				</select>
+			</div><br>
+			<div>
+				<select name="age">
+                    <option value="q_name">Ваш возраст?</option>
+					<option value="20">юнга (0-20)</option>
+					<option value="40">матрос (21-40)</option>
+					<option value="60">мичман (41-60)</option>
+					<option value="80">капитан (61-80)</option>
+					<option value="100">адмирал (81-100)</option>
+				</select>
+			</div><br>
+			<div>
+				<div>Откуда Вы?</div>
+				<div><input type="text" name="city"></div>
+			</div><br>
+			<div>
+				<input class="submit" type="submit" name="submit" value="Отправить">
+			</div>
+		</form>
+</main>
+{% endblock %}
